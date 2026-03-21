@@ -20,7 +20,7 @@ import JoinRoomModal from '../components/modals/JoinRoomModal';
 import LanguageSelector from '../components/LanguageSelector';
 import RoomFullModal from '../components/RoomFullModal';
 
-const SERVER_URL = 'http://localhost:3001';
+const SERVER_URL = 'https://examhub2-ro0x.onrender.com';
 
 const examIcons = {
   'UPSC Civil Services': '🏛️',

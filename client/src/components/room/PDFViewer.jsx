@@ -42,7 +42,7 @@ const PDFViewer = ({ currentPdf, isCreator, socket, roomId }) => {
       formData.append('pdf', file);
       formData.append('roomId', roomId);
 
-      const response = await fetch('http://localhost:3001/api/upload-pdf', {
+      const response = await fetch('https://examhub2-ro0x.onrender.com/api/upload-pdf', {
         method: 'POST',
         body: formData,
       });

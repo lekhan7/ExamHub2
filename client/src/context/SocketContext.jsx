@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 
 const SocketContext = createContext(null);
 
-const SERVER_URL = 'http://localhost:3001';
+const SERVER_URL = 'https://examhub2-ro0x.onrender.com';
 
 export function SocketProvider({ children }) {
   const [socket, setSocket] = useState(null);

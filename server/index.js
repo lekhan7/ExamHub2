@@ -12,7 +12,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: ["http://localhost:5173", "http://localhost:5174",'https://exam-hub2.vercel.app/'],
     methods: ["GET", "POST"]
   }
 });
@@ -45,6 +45,9 @@ const upload = multer({
 });
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('ExamHub Server is running!');
+});
 app.get('/api/rooms', async (req, res) => {
   try {
     const publicRooms = await roomManager.getPublicRooms();
