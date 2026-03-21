@@ -1,0 +1,161 @@
+{
+  "navbar": {
+    "home": "Home",
+    "joinRoom": "Join Room",
+    "createRoom": "Create Room",
+    "language": "Language"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "ok": "OK",
+    "yes": "Yes",
+    "no": "No",
+    "connected": "Connected",
+    "disconnected": "Disconnected"
+  },
+  "home": {
+    "title": "Exam Hub",
+    "subtitle": "Collaborative Study Rooms",
+    "description": "Create and join study rooms to collaborate with friends. Upload PDFs, take notes, draw diagrams, and chat in real-time.",
+    "createRoom": "Create Room",
+    "joinRoom": "Join Room",
+    "publicRooms": "Public Rooms",
+    "noPublicRooms": "No public rooms available. Create one to get started!",
+    "roomCode": "Room Code",
+    "enterRoomCode": "Enter room code",
+    "join": "Join",
+    "full": "Full",
+    "userCount": "{{current}}/{{max}} users",
+    "roomFullTooltip": "This room is full",
+    "live": "Live",
+    "public": "Public",
+    "private": "Private",
+    "exam": "Exam",
+    "features": {
+      "pdf": "PDF Collaboration",
+      "pdfDesc": "Study PDFs together with synced viewing",
+      "notes": "Shared Notes",
+      "notesDesc": "Real-time notes for the whole group",
+      "chat": "Live Chat",
+      "chatDesc": "Instant messaging with study buddies",
+      "whiteboard": "Whiteboard",
+      "whiteboardDesc": "Draw, sketch, and visualize ideas"
+    },
+    "hero": {
+      "tagline": "Study together, succeed together",
+      "title": "Study Together.",
+      "subtitle": "Win Together.",
+      "description": "Join collaborative study rooms for competitive exams. Share PDFs, take notes, whiteboard, and chat in real-time."
+    },
+    "sections": {
+      "publicRooms": "Public Study Rooms",
+      "publicRoomsDesc": "Join an active room and start studying together",
+      "roomsActive": "{{count}} rooms active",
+      "noPublicRoomsTitle": "No public rooms yet",
+      "noPublicRoomsDesc": "Be the first to create a study room!"
+    }
+  },
+  "createRoom": {
+    "title": "Create New Room",
+    "privateTitle": "Create Private Room",
+    "description": "Set up your collaborative space",
+    "privateDesc": "Set up your hidden study space",
+    "roomCreated": "Room Created!",
+    "shareAndStudy": "Share and start studying",
+    "roomName": "Room Name",
+    "enterRoomName": "Enter room name",
+    "roomType": "Room Type",
+    "public": "Public",
+    "private": "Private",
+    "create": "Create",
+    "cancel": "Cancel"
+  },
+  "joinRoom": {
+    "title": "Join Room",
+    "subtitle": "Enter your name to join",
+    "displayNameLabel": "Your Display Name",
+    "displayNamePlaceholder": "Enter your name",
+    "roomCodeLabel": "Room Code",
+    "roomCodePlaceholder": "Enter room code",
+    "privateRoomNote": "This is a private room. You need the room code to join.",
+    "displayNameRequired": "Please enter your display name",
+    "roomCodeRequired": "Please enter the room code",
+    "joinFailed": "Failed to join room",
+    "connectionTimeout": "Connection timeout. Please try again.",
+    "memberCount": "{{count}} member{{count, plural, one {} other {s}}} online",
+    "joining": "Joining...",
+    "joinNow": "Join Now"
+  },
+  "room": {
+    "tabs": {
+      "pdf": "PDF Viewer",
+      "notes": "Notes",
+      "scribble": "Scribble Pad",
+      "chat": "Chat"
+    },
+    "sidebar": {
+      "members": "Members",
+      "online": "Online",
+      "uploadPdf": "Upload PDF",
+      "leaveRoom": "Leave Room"
+    },
+    "roomFullBanner": "Room is now full — no more members can join",
+    "reconnecting": "Reconnecting to room...",
+    "connecting": "Connecting to room...",
+    "connectionPersist": "If this persists, the room may no longer exist.",
+    "copied": "Copied!",
+    "shareLink": "Share Link",
+    "you": "You",
+    "creator": "Room Creator",
+    "member": "Member",
+    "pdf": {
+      "upload": "Upload PDF",
+      "noPdf": "No PDF uploaded yet",
+      "uploading": "Uploading...",
+      "uploadSuccess": "PDF uploaded successfully",
+      "uploadError": "Failed to upload PDF",
+      "alert": "Please upload a PDF file",
+      "creatorMessage": "Upload a PDF to share with everyone in the room.",
+      "waitMessage": "Waiting for the room creator to upload a PDF...",
+      "maxSize": "Maximum file size: 10MB",
+      "replace": "Replace"
+    },
+    "notes": {
+      "placeholder": "Type your notes here... Click the Save button when done.",
+      "lockedPlaceholder": "Notes have been saved and locked. No further edits allowed.",
+      "save": "Save Notes",
+      "saving": "Saving...",
+      "savedBy": "Saved by",
+      "typeAndSave": "Type your notes and click Save to lock them",
+      "clear": "Clear"
+    },
+    "scribble": {
+      "clear": "Clear Canvas",
+      "download": "Download",
+      "pen": "Pen",
+      "eraser": "Eraser",
+      "color": "Color",
+      "strokeSize": "Stroke Size"
+    },
+    "chat": {
+      "placeholder": "Type a message...",
+      "send": "Send",
+      "noMessages": "No messages yet",
+      "startConversation": "Start the conversation!"
+    }
+  },
+  "roomFull": {
+    "title": "🚫 Room is Full",
+    "message": "This room already has 10 members. Please try joining another room.",
+    "browseRooms": "Browse Other Rooms"
+  },
+  "errors": {
+    "roomNotFound": "Room not found",
+    "invalidRoomCode": "Invalid room code",
+    "connectionError": "Connection error",
+    "tryAgain": "Please try again"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "navbar": {
+    "home": "હોમ",
+    "joinRoom": "રૂમમાં જોડાઓ",
+    "createRoom": "રૂમ બનાવો",
+    "language": "ભાષા"
+  },
+  "home": {
+    "title": "પરીક્ષા હબ",
+    "subtitle": "સહયોગી અભ્યાસ રૂમ",
+    "description": "મિત્રો સાથે સહયોગ કરવા માટે અભ્યાસ રૂમ બનાવો અને જોડાઓ. PDF અપલોડ કરો, નોટ્સ લો, આકૃતિઓ દોરો, અને રિયલ-ટાઇમમાં ચેટ કરો.",
+    "createRoom": "રૂમ બનાવો",
+    "joinRoom": "રૂમમાં જોડાઓ",
+    "publicRooms": "પબ્લિક રૂમ",
+    "noPublicRooms": "કોઈ પબ્લિક રૂમ ઉપલબ્ધ નથી. શરૂ કરવા માટે એક બનાવો!",
+    "roomCode": "રૂમ કોડ",
+    "enterRoomCode": "રૂમ કોડ દાખલ કરો",
+    "join": "જોડાઓ",
+    "full": "ભરેલું",
+    "userCount": "{{current}}/{{max}} વપરાશકર્તાઓ"
+  },
+  "createRoom": {
+    "title": "નવું રૂમ બનાવો",
+    "roomName": "રૂમનું નામ",
+    "enterRoomName": "રૂમનું નામ દાખલ કરો",
+    "roomType": "રૂમનો પ્રકાર",
+    "public": "પબ્લિક",
+    "private": "ખાનગી",
+    "create": "બનાવો",
+    "cancel": "રદ કરો"
+  },
+  "room": {
+    "tabs": {
+      "pdf": "PDF વ્યૂઅર",
+      "notes": "નોટ્સ",
+      "scribble": "સ્ક્રિબલ પેડ",
+      "chat": "ચેટ"
+    },
+    "sidebar": {
+      "members": "સભ્યો",
+      "online": "ઓનલાઇન",
+      "uploadPdf": "PDF અપલોડ કરો",
+      "leaveRoom": "રૂમ છોડો"
+    },
+    "pdf": {
+      "upload": "PDF અપલોડ કરો",
+      "noPdf": "હજુ સુધી કોઈ PDF અપલોડ થઈ નથી",
+      "uploading": "અપલોડ થઈ રહી છે...",
+      "uploadSuccess": "PDF સફળતાપૂર્વક અપલોડ થઈ",
+      "uploadError": "PDF અપલોડ નિષ્ફળ થઈ"
+    },
+    "notes": {
+      "placeholder": "તમારા નોટ્સ અહીં ટાઇપ કરવાનું શરૂ કરો...",
+      "clear": "સાફ કરો",
+      "save": "સાચવો"
+    },
+    "scribble": {
+      "clear": "સાફ કરો",
+      "download": "ડાઉનલોડ કરો"
+    },
+    "chat": {
+      "placeholder": "સંદેશ ટાઇપ કરો...",
+      "send": "મોકલો",
+      "noMessages": "હજુ સુધી કોઈ સંદેશો નથી"
+    }
+  },
+  "roomFull": {
+    "title": "🚫 રૂમ ભરેલું છે",
+    "message": "આ રૂમમાં પહેલેથી જ 10 સભ્યો છે. કૃપા કરીને બીજા રૂમમાં જોડાવાનો પ્રયાસ કરો.",
+    "browseRooms": "અન્ય રૂમ બ્રાઉઝ કરો"
+  },
+  "errors": {
+    "roomNotFound": "રૂમ મળ્યું નહીં",
+    "invalidRoomCode": "અમાન્ય રૂમ કોડ",
+    "connectionError": "જોડાણ ભૂલ",
+    "tryAgain": "કૃપા કરીને ફરીથી પ્રયાસ કરો"
+  },
+  "common": {
+    "loading": "લોડ થઈ રહ્યું છે...",
+    "error": "ભૂલ",
+    "success": "સફળતા",
+    "close": "બંધ કરો",
+    "ok": "બરાબર",
+    "yes": "હા",
+    "no": "ના"
+  }
+}

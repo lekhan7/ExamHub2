@@ -1,0 +1,87 @@
+{
+  "navbar": {
+    "home": "ਹੋਮ",
+    "joinRoom": "ਰੂਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+    "createRoom": "ਰੂਮ ਬਣਾਓ",
+    "language": "ਭਾਸ਼ਾ"
+  },
+  "home": {
+    "title": "ਪ੍ਰੀਖਿਆ ਹੱਬ",
+    "subtitle": "ਸਹਿਯੋਗੀ ਅਧਿਐਨ ਕਮਰੇ",
+    "description": "ਦੋਸਤਾਂ ਨਾਲ ਸਹਿਯੋਗ ਕਰਨ ਲਈ ਅਧਿਐਨ ਕਮਰੇ ਬਣਾਓ ਅਤੇ ਸ਼ਾਮਲ ਹੋਵੋ। PDF ਅੱਪਲੋਡ ਕਰੋ, ਨੋਟ ਲਓ, ਚਿੱਤਰ ਬਣਾਓ, ਅਤੇ ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਚੈਟ ਕਰੋ।",
+    "createRoom": "ਰੂਮ ਬਣਾਓ",
+    "joinRoom": "ਰੂਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+    "publicRooms": "ਪਬਲਿਕ ਰੂਮ",
+    "noPublicRooms": "ਕੋਈ ਪਬਲਿਕ ਰੂਮ ਉਪਲਬਧ ਨਹੀਂ ਹਨ। ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਇੱਕ ਬਣਾਓ!",
+    "roomCode": "ਰੂਮ ਕੋਡ",
+    "enterRoomCode": "ਰੂਮ ਕੋਡ ਦਾਖਲ ਕਰੋ",
+    "join": "ਸ਼ਾਮਲ ਹੋਵੋ",
+    "full": "ਭਰਿਆ ਹੋਇਆ",
+    "userCount": "{{current}}/{{max}} ਉਪਭੋਗਤਾ"
+  },
+  "createRoom": {
+    "title": "ਨਵਾਂ ਰੂਮ ਬਣਾਓ",
+    "roomName": "ਰੂਮ ਦਾ ਨਾਮ",
+    "enterRoomName": "ਰੂਮ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
+    "roomType": "ਰੂਮ ਦੀ ਕਿਸਮ",
+    "public": "ਪਬਲਿਕ",
+    "private": "ਨਿੱਜੀ",
+    "create": "ਬਣਾਓ",
+    "cancel": "ਰੱਦ ਕਰੋ"
+  },
+  "room": {
+    "tabs": {
+      "pdf": "PDF ਵਿਊਅਰ",
+      "notes": "ਨੋਟ",
+      "scribble": "ਸਕ੍ਰਿਬਲ ਪੈਡ",
+      "chat": "ਚੈਟ"
+    },
+    "sidebar": {
+      "members": "ਮੈਂਬਰ",
+      "online": "ਔਨਲਾਈਨ",
+      "uploadPdf": "PDF ਅੱਪਲੋਡ ਕਰੋ",
+      "leaveRoom": "ਰੂਮ ਛੱਡੋ"
+    },
+    "pdf": {
+      "upload": "PDF ਅੱਪਲੋਡ ਕਰੋ",
+      "noPdf": "ਹੁਣ ਤੱਕ ਕੋਈ PDF ਅੱਪਲੋਡ ਨਹੀਂ ਕੀਤਾ ਗਿਆ",
+      "uploading": "ਅੱਪਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+      "uploadSuccess": "PDF ਸਫਲਤਾਪੂਰਵਕ ਅੱਪਲੋਡ ਹੋ ਗਿਆ",
+      "uploadError": "PDF ਅੱਪਲੋਡ ਅਸਫਲ ਰਿਹਾ"
+    },
+    "notes": {
+      "placeholder": "ਆਪਣੇ ਨੋਟ ਇੱਥੇ ਟਾਈਪ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ...",
+      "clear": "ਸਾਫ਼ ਕਰੋ",
+      "save": "ਸੇਵ ਕਰੋ"
+    },
+    "scribble": {
+      "clear": "ਸਾਫ਼ ਕਰੋ",
+      "download": "ਡਾਊਨਲੋਡ ਕਰੋ"
+    },
+    "chat": {
+      "placeholder": "ਸੁਨੇਹਾ ਟਾਈਪ ਕਰੋ...",
+      "send": "ਭੇਜੋ",
+      "noMessages": "ਹੁਣ ਤੱਕ ਕੋਈ ਸੁਨੇਹਾ ਨਹੀਂ ਹੈ"
+    }
+  },
+  "roomFull": {
+    "title": "🚫 ਰੂਮ ਭਰਿਆ ਹੋਇਆ ਹੈ",
+    "message": "ਇਸ ਰੂਮ ਵਿੱਚ ਪਹਿਲਾਂ ਹੀ 10 ਮੈਂਬਰ ਹਨ। ਕਿਰਪਾ ਕਰਕੇ ਦੂਜੇ ਰੂਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+    "browseRooms": "ਹੋਰ ਰੂਮ ਬ੍ਰਾਊਜ਼ ਕਰੋ"
+  },
+  "errors": {
+    "roomNotFound": "ਰੂਮ ਨਹੀਂ ਲੱਭਿਆ",
+    "invalidRoomCode": "ਅਵੈਧ ਰੂਮ ਕੋਡ",
+    "connectionError": "ਕਨੈਕਸ਼ਨ ਗਲਤੀ",
+    "tryAgain": "ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
+  },
+  "common": {
+    "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+    "error": "ਗਲਤੀ",
+    "success": "ਸਫਲਤਾ",
+    "close": "ਬੰਦ ਕਰੋ",
+    "ok": "ਠੀਕ ਹੈ",
+    "yes": "ਹਾਂ",
+    "no": "ਨਹੀਂ"
+  }
+}
