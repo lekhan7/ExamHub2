@@ -3,25 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --color-bg-primary: #0f0f1a;
-  --color-bg-secondary: #1a1a2e;
-  --color-bg-tertiary: #252542;
-  --color-bg-card: #16162a;
-  --color-bg-hover: #252545;
-  --color-text-primary: #f8fafc;
-  --color-text-secondary: #94a3b8;
-  --color-text-muted: #64748b;
-  --color-accent-primary: #8b5cf6;
-  --color-accent-secondary: #6366f1;
-  --color-accent-hover: #7c3aed;
-  --color-border: #2d2d4a;
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
+  --color-bg-primary: #0a0e27;
+  --color-bg-secondary: #151932;
+  --color-bg-tertiary: #1e2139;
+  --color-bg-card: #1a1d35;
+  --color-bg-hover: #252842;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b8c5d6;
+  --color-text-muted: #8896a7;
+  --color-google-blue: #4285F4;
+  --color-google-green: #34A853;
+  --color-google-yellow: #FBBC05;
+  --color-google-red: #EA4335;
+  --color-accent-primary: #4285F4;
+  --color-accent-secondary: #34A853;
+  --color-accent-hover: #EA4335;
+  --color-gradient-start: #4285F4;
+  --color-gradient-end: #34A853;
+  --color-border: #2d3147;
+  --color-success: #34A853;
+  --color-warning: #FBBC05;
+  --color-error: #EA4335;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
+  --shadow-glow: 0 0 20px rgba(66, 133, 244, 0.4);
+  --shadow-glow-green: 0 0 30px rgba(52, 168, 83, 0.3);
+  --shadow-glow-yellow: 0 0 30px rgba(251, 188, 5, 0.3);
+  --shadow-glow-red: 0 0 30px rgba(234, 67, 53, 0.3);
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
@@ -34,21 +43,30 @@
   --color-bg-secondary: #f1f5f9;
   --color-bg-tertiary: #e2e8f0;
   --color-bg-card: #ffffff;
-  --color-bg-hover: #e2e8f0;
+  --color-bg-hover: #f8fafc;
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
-  --color-text-muted: #94a3b8;
-  --color-accent-primary: #7c3aed;
-  --color-accent-secondary: #6366f1;
-  --color-accent-hover: #8b5cf6;
-  --color-border: #cbd5e1;
-  --color-success: #059669;
-  --color-warning: #d97706;
-  --color-error: #dc2626;
+  --color-text-muted: #64748b;
+  --color-google-blue: #4285F4;
+  --color-google-green: #34A853;
+  --color-google-yellow: #FBBC05;
+  --color-google-red: #EA4335;
+  --color-accent-primary: #4285F4;
+  --color-accent-secondary: #34A853;
+  --color-accent-hover: #EA4335;
+  --color-gradient-start: #4285F4;
+  --color-gradient-end: #34A853;
+  --color-border: #e2e8f0;
+  --color-success: #34A853;
+  --color-warning: #FBBC05;
+  --color-error: #EA4335;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 0 20px rgba(124, 58, 237, 0.2);
+  --shadow-glow: 0 0 20px rgba(66, 133, 244, 0.2);
+  --shadow-glow-green: 0 0 30px rgba(52, 168, 83, 0.15);
+  --shadow-glow-yellow: 0 0 30px rgba(251, 188, 5, 0.15);
+  --shadow-glow-red: 0 0 30px rgba(234, 67, 53, 0.15);
 }
 
 * {
@@ -139,10 +157,60 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #8b5cf6, #6366f1, #a78bfa);
+  background: linear-gradient(135deg, var(--color-google-blue), var(--color-google-green), var(--color-google-yellow));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--color-google-blue), var(--color-google-green));
+}
+
+.gradient-bg-all {
+  background: linear-gradient(135deg, var(--color-google-blue), var(--color-google-green), var(--color-google-yellow), var(--color-google-red));
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, var(--color-google-blue), var(--color-google-green));
+  padding: 2px;
+  border-radius: var(--radius-lg);
+}
+
+.gradient-border-inner {
+  background: var(--color-bg-card);
+  border-radius: calc(var(--radius-lg) - 2px);
+  padding: 1rem;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 50%, var(--color-bg-tertiary) 100%);
+}
+
+.google-blue { color: var(--color-google-blue); }
+.google-green { color: var(--color-google-green); }
+.google-yellow { color: var(--color-google-yellow); }
+.google-red { color: var(--color-google-red); }
+
+.bg-google-blue { background-color: var(--color-google-blue); }
+.bg-google-green { background-color: var(--color-google-green); }
+.bg-google-yellow { background-color: var(--color-google-yellow); }
+.bg-google-red { background-color: var(--color-google-red); }
+
+.glow-effect {
+  box-shadow: var(--shadow-glow);
+}
+
+.glow-effect-green {
+  box-shadow: var(--shadow-glow-green);
+}
+
+.glow-effect-yellow {
+  box-shadow: var(--shadow-glow-yellow);
+}
+
+.glow-effect-red {
+  box-shadow: var(--shadow-glow-red);
 }
 
 .btn {
@@ -156,12 +224,12 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+  background: linear-gradient(135deg, var(--color-google-blue), var(--color-google-green));
   color: white;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--color-accent-hover), var(--color-accent-primary));
+  background: linear-gradient(135deg, var(--color-google-green), var(--color-google-blue));
   box-shadow: var(--shadow-glow);
 }
 

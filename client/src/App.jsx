@@ -16,7 +16,7 @@ function App() {
   return (
     <SocketProvider>
       <RoomProvider>
-        <div key={i18n.language} className="min-h-screen bg-primary text-primary">
+        <div key={i18n.language} className="min-h-screen hero-gradient text-primary">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/join" element={<JoinRoom />} />
