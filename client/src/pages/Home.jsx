@@ -10,7 +10,10 @@ import {
   FileText,
   Globe,
   Lock,
-  Crown
+  Crown,
+  DoorOpen,
+  Wifi,
+  WifiOff
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useSocket } from '../context/SocketContext';
@@ -116,7 +119,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-primary">
       {/* Navbar */}
-      <nav className="glass sticky top-0 z-50 border-b border-custom">
+      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <motion.div 
@@ -127,7 +130,7 @@ function Home() {
               <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center glow-effect">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">{t('home.title')}</span>
+              <span className="text-xl font-bold dark-charcoal">{t('home.title')}</span>
             </motion.div>
             
             <motion.div 
@@ -136,15 +139,24 @@ function Home() {
               className="flex items-center gap-4"
             >
               <LanguageSelector />
-              <div className="flex items-center gap-2 text-sm text-secondary">
-                <div className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`} />
-                {isConnected ? t('common.connected') : t('common.disconnected')}
+              <div className="flex items-center gap-2 text-sm">
+                {isConnected ? (
+                  <>
+                    <Wifi className="w-4 h-4" style={{ color: '#22C55E' }} />
+                    <span style={{ color: '#22C55E' }}>Connected</span>
+                  </>
+                ) : (
+                  <>
+                    <WifiOff className="w-4 h-4" style={{ color: '#EF4444' }} />
+                    <span style={{ color: '#EF4444' }}>Not Connected</span>
+                  </>
+                )}
               </div>
               <button
                 onClick={() => navigate('/join')}
                 className="btn hidden sm:flex"
               >
-                <Globe className="w-4 h-4" />
+                <DoorOpen className="w-4 h-4" />
                 {t('navbar.joinRoom')}
               </button>
             </motion.div>
@@ -153,9 +165,8 @@ function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 hero-gradient opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-br from-google-blue/20 via-transparent to-google-green/20" />
+      <section className="relative overflow-hidden py-20 lg:py-32 hero-gradient">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/10 via-transparent to-bright-blue/10" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -164,11 +175,9 @@ function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full gradient-border glow-effect mb-6">
-                <div className="gradient-border-inner flex items-center gap-2">
-                  <Users className="w-4 h-4 text-accent-primary" />
-                  <span className="text-accent-primary font-medium">{t('home.hero.tagline')}</span>
-                </div>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-blue/10 border-2 border-dark-charcoal text-primary-blue text-sm font-medium mb-6">
+                <Users className="w-4 h-4" />
+                {t('home.hero.tagline')}
               </span>
             </motion.div>
 
@@ -178,16 +187,16 @@ function Home() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-5xl lg:text-7xl font-bold mb-6"
             >
-              <span className="text-primary">{t('home.hero.title')}</span>
+              <span className="primary-blue">{t('home.hero.title')}</span>
               <br />
-              <span className="gradient-text">{t('home.hero.subtitle')}</span>
+              <span className="bright-blue">{t('home.hero.subtitle')}</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl text-secondary max-w-2xl mx-auto mb-10"
+              className="text-xl body-text max-w-2xl mx-auto mb-10"
             >
               {t('home.hero.description')}
             </motion.p>
@@ -196,29 +205,27 @@ function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
             >
               <button
                 onClick={() => setShowCreateModal(true)}
-                className="btn-primary px-8 py-4 text-lg glow-effect"
+                className="btn-primary px-8 py-4 text-lg"
               >
                 <Plus className="w-5 h-5" />
                 {t('home.createRoom')}
               </button>
               <button
                 onClick={() => setShowCreatePrivateModal(true)}
-                className="gradient-border px-8 py-4 text-lg hover:glow-effect transition-all duration-300"
+                className="btn px-8 py-4 text-lg"
               >
-                <div className="gradient-border-inner flex items-center gap-2">
-                  <Lock className="w-5 h-5 text-accent-secondary" />
-                  <span>{t('home.createRoom')} {t('createRoom.private')}</span>
-                </div>
+                <Lock className="w-5 h-5" />
+                {t('home.createRoom')} {t('createRoom.private')}
               </button>
               <button
                 onClick={() => navigate('/join')}
-                className="btn px-8 py-4 text-lg hover:glow-effect-purple transition-all duration-300"
+                className="btn px-8 py-4 text-lg"
               >
-                <Globe className="w-5 h-5" />
+                <DoorOpen className="w-5 h-5" />
                 {t('home.joinRoom')}
               </button>
             </motion.div>
@@ -227,8 +234,12 @@ function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-16 section-green">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Features</h2>
+            <p className="text-white/90">Everything you need for collaborative studying</p>
+          </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
@@ -236,13 +247,13 @@ function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="card p-6 text-center hover:glow-effect transition-all duration-300"
+                className="card p-6 text-center"
               >
-                <div className="w-12 h-12 rounded-xl gradient-bg-all flex items-center justify-center mx-auto mb-4 glow-effect">
+                <div className="w-12 h-12 rounded-xl bg-primary-blue flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="font-semibold text-primary mb-2">{feature.title}</h3>
-                <p className="text-sm text-secondary">{feature.desc}</p>
+                <h3 className="font-semibold dark-charcoal mb-2">{feature.title}</h3>
+                <p className="text-sm body-text">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -250,39 +261,39 @@ function Home() {
       </section>
 
       {/* Public Rooms Section */}
-      <section className="py-20">
+      <section className="py-20 section-red">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-10">
             <div>
-              <h2 className="text-3xl font-bold gradient-text mb-2">{t('home.sections.publicRooms')}</h2>
-              <p className="text-secondary">{t('home.sections.publicRoomsDesc')}</p>
+              <h2 className="text-3xl font-bold text-white mb-2">{t('home.sections.publicRooms')}</h2>
+              <p className="text-white/90">{t('home.sections.publicRoomsDesc')}</p>
             </div>
-            <div className="flex items-center gap-2 text-sm text-secondary">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <div className="flex items-center gap-2 text-sm text-white">
+              <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
               {t('home.sections.roomsActive', { count: publicRooms.length })}
             </div>
           </div>
 
           {loading ? (
             <div className="flex items-center justify-center py-20">
-              <div className="w-8 h-8 border-2 border-google-blue border-t-transparent rounded-full animate-spin" />
+              <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin" />
             </div>
           ) : publicRooms.length === 0 ? (
-            <div className="text-center py-20 card hover:glow-effect transition-all duration-300">
-              <div className="w-16 h-16 rounded-full gradient-border flex items-center justify-center mx-auto mb-4">
-                <div className="gradient-border-inner">
-                  <Users className="w-8 h-8 google-blue" />
-                </div>
+            <div className="text-center py-20 card">
+              <div className="w-16 h-16 rounded-full bg-primary-blue/10 flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 primary-blue" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">{t('home.sections.noPublicRoomsTitle')}</h3>
-              <p className="text-secondary mb-6">{t('home.sections.noPublicRoomsDesc')}</p>
-              <button
-                onClick={() => setShowCreateModal(true)}
-                className="btn-primary glow-effect"
-              >
-                <Plus className="w-4 h-4" />
-                {t('home.createRoom')}
-              </button>
+              <h3 className="text-xl font-semibold dark-charcoal mb-2">{t('home.sections.noPublicRoomsTitle')}</h3>
+              <p className="body-text mb-6">{t('home.sections.noPublicRoomsDesc')}</p>
+              <div className="flex justify-center">
+                <button
+                  onClick={() => setShowCreateModal(true)}
+                  className="btn-primary"
+                >
+                  <Plus className="w-4 h-4" />
+                  {t('home.createRoom')}
+                </button>
+              </div>
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
